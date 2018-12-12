@@ -4,12 +4,19 @@ import Card from './Card';
 class WithoutHooks extends Component {
 
   state = {
-    name: 'Diego'
+    name: 'Oswaldinho',
+    surname: 'Martínez'
   }
 
   handleNameChange = (e) => {
     this.setState({
       name: e.target.value
+    });
+  };
+
+  handleSurnameChange = (e) => {
+    this.setState({
+      surname: e.target.value
     });
   };
 
@@ -20,6 +27,12 @@ class WithoutHooks extends Component {
           <input 
             value={this.state.name}
             onChange={this.handleNameChange}
+          />
+        </Card>
+        <Card label='Surname'>
+          <input 
+            value={this.state.surname}
+            onChange={this.handleSurnameChange}
           />
         </Card>
       </section>
